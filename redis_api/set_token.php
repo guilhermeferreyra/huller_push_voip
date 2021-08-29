@@ -18,11 +18,12 @@ function post_data($token, $device, $id_user){
     try{
         $redis = new Redis();
         $redis->connect("redis");
-        $redis->set("token_$id_user", "{token:$token, device:$device}");
-        echo "token_$id_user, {token:$token, device:$device}";
-        #echo "OK!";
+        $key = "token_$id_user";
+        $value = '{"token":'."\"$token\"".', "device":'."\"$device\"}";
+        $redis->set($key, $value);
+        echo "$value\n";
     }catch( Exception $e ){
         echo $e->getMessage();
     }
 }
-post_data($decoded->key, $decoded->value);
+post_data($token, $device, $id_user);
