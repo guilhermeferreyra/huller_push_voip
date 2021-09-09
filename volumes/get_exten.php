@@ -16,10 +16,10 @@ function arrangeData($exten, $password){
 
 $user = $_GET['user'];
 
-if($user == "veni"){
+if($user == "5a64b551-1b7b-40ba-b751-efb2375234c8"){
     echo json_encode(arrangeData("1198601", "G3Vp&Rj59UKKxE4"));
 }
-elseif($user == "gui"){
+elseif($user == "448f7d50-5fc4-43fa-bb8b-c5d2621e15b4"){
     echo json_encode(arrangeData("1198602", "wwnP5@*Cr$4mTyKg"));
 }
 else{
