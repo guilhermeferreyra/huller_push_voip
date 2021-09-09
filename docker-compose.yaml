@@ -15,7 +15,7 @@ services:
     command: redis-server --appendonly yes
   
   redis_php_fpm:
-    build: ./redis_php_fpm
+    image: registry.scaip.com.br/scaip_voip/huller_push_voip_redis_php_fpm@sha256:b17348698e69faa024bcac58bd0b2e313e39f65adc837299f21232cab9eb56d7
     container_name: redis_php_fpm
     restart: always
     volumes:
